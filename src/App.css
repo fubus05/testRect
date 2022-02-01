@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+input[type="radio"]{
+    display: none;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 8px 15px 8px 15px;
+
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html{
+    background: black;
+}
+.mobileResp,
+.mobileRespSec{
+    display: inline-flex;
+}
+.main{
+    background: white;
+    border-radius: 20px;
+    display: inline-flex;
+    padding: 6px;
+    border: 1px solid rgba(20, 80, 116, 0.4);
+}
+.imgBlock{
+    position: relative;
+}
+.logo{
+    padding: 42px 24px 24px 24px;
+    background: #143E41;
+    border-radius: 20px 0 0 20px  ;
+}
+.logoAirHorn{
+    padding: 10px 0 11px 15px;
+}
+
+.saleBlock{
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    border-radius: 20px 0 20px 0;
+    font-size: 16px;
+    background: #FF891C;
+    display: inline-flex;
+    position: absolute; top: 0; left: 0
+}
+.welcomeBlock:before{
+    content: " ";
+    background: rgba(0, 0, 0, 0.15);
+    width: 1px;
+    height: 75%;
+    float: right;
+    margin: 20px 0 0 0 ;
+}
+.rateBlock{
+    text-align:center;
+    padding: 0 0 0 0;
+    align-items: center;
+}
+
+
+.getBonus{
+    display: block;
+    margin: 20px 43px 0 0;
+}
+
+.rateNumb{
+    margin: 48px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+.rateBlock p{
+    margin-top: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+.rateBlock:before{
+    content: " ";
+    background: rgba(0, 0, 0, 0.15);
+    width: 1px;
+    height: 75%;
+    float: right;
+    margin: 20px 0 0 0 ;
+}
+.rateBlock h1{
+    font-size: 16px;
+    margin: 28px 0 0 0 ;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+}
+.Bonus{
+    background: #01247E;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+    padding: 12px 42px 12px 42px;
+    font-size: 21px;
+    display: block
+
+}
+.Bonus:after{
+    content: "🔥";
+}
+.getBonus a{
+    display: block;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.getBonus a:after{
+    content: url("./img/Vector.svg");
+}
+
+.welcomeBlock a{
+    font-size: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+}
+.welcomeBlock h1, a{
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.starSet{
+    margin: 8px 0 8px 0;
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.welcomeBlock p{
+    margin: 0 45px 0 45px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+}
+.welcomeBlock{
+    text-align:center;
+    padding: 0 0 0 0;
+    align-items: center;
+}
+@media screen and (min-width: 322px) {
+    .welcomeBlock h2{
+        display: none;
+    }
+}
+@media screen and (max-width: 321px) {
+    .saleBlock{
+        border-radius: 8px 0 8px 0;
+    }
+    .saleBlock p{
+        font-size: 8px;
+        margin: 6px 10px 6px 3px;
+    }
+    .saleBlock img{
+        width: 11px;
+        padding: 0 0 0 0;
+        margin: 0 0 0 4px;
+    }
+    .logo{
+        padding: 20px 8px 10px 8px;
+        border-radius: 8px;
+        width: 120px;
+    }
+    .welcomeBlock p, a, :before{
+        display: none;
+    }
+    .welcomeBlock h2{
+        font-family: 'Manrope', sans-serif;
+        font-weight: normal;
+        font-size: 11px;
+        color: #000000;
+        margin: 0 37px 0 10px;
+    }
+
+    .welcomeBlock h1{
+        font-family: 'Manrope', sans-serif;
+        font-weight: normal;
+        font-size: 12px;
+        color: #01247E;
+        margin: 0 24px 0 10px;
+    }
+    .welcomeBlock,
+    .rateBlock{
+        text-align: left;
+    }
+    .rateBlock h1{
+        display: none;
+    }
+    .rateBlock p{
+        margin: 0 0 0 0;
+        font-size: 12px;
+    }
+    .main{
+        display: block;
+        padding: 10px;
+    }
+    .mobileResp{
+        display: inline-flex;
+    }
+    .rateNumb{
+
+        margin: -8px 0 4px 0;
+    }
+    .starSet{
+        margin: 8px 0 -5px 0;
+    }
+    .getBonus{
+        margin: 0 0 0 0;
+    }
+    .Bonus{
+        margin-left: 12px;
+        font-size: 18px;
+        padding: 10px 16px 9px 15px;
+    }
+    .Bonus:after {
+        content: "";
+    }
+    .getBonus a{
+        display: none;
+    }
+}
